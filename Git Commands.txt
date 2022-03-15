@@ -1,0 +1,78 @@
+----- Setting user credentials on git -----
+1. git config --global user.name = <Name> ----> For setting name 
+2. git config --global user.email = <Email> -----> For setting email
+
+
+
+------- Git commands -------
+
+1. git init -----> To make a directory as a git directory
+2. git status ----> To check the status of the directory
+3. git add --a or git add . ----> To add all files in staging area
+4. git commit -m "Commit Text" ----> To commit staging files
+5. git log ----> To list all the commits
+6. git add <File Name> ----> To add a particular file to staging area
+7. rm -rf .git ----> To delete a git directory
+8. git clone <Link From GitHub> ----> To clone a github repositary to your local computer
+
+==> To ignore any file create file .gitignore and add the full name of the file to the gitignore file
+ 
+==> If you want to ignore all files of the same extension then you can just add *.fileExtention to gitignore file
+
+==> But we can't ignore those files which is being traced. We have to untrace the tracing file and then have to add to gitignore. 
+
+==> For untracing file command as follow ---> git rm --cached <File Name> 
+
+9. git diff ---> Give the differences (in file) bewteen the staging area and working directory 
+10. git diff --staged ----> If all the changes has been staged it give the last differences before being staged.
+11. git commit -a -m "Commit Text" ---> It commit directly without going to staging area.
+12. git rm <File Name> ----> To delete a file and adding the change to staging area
+13. git mv <Old File Name> <New File Name> ----> To rename a file and adding the chage to staging area
+14. git log -p -n ---> To list all the commits with there differences (Chages). n is number of commits you want
+15. git log --stat ---> To list all the details of all commits in short summary form
+16. git log --pretty=oneline ----> To list all the commits in one line
+17. git log --pretty=short ---> To list all the commits with author name in short 
+18. git log --pretty=full ----> To list all the commits with author name and the one who commits 
+19. git log --since=n.days ---> To list all the commits of last n days
+20. git log --since=n.weeks ----> To list all the commits of last n weeks 
+21. git log --since=n.years ----> To list all the commits of last n years
+22. git log --pretty=format: "format" ---> To list all the commits as format is given 
+23. git restore --staged <File> ---> Unstage a file 
+24. git checkout -- <File Name> ----> To restore the data deleted or to restore the last snapshot
+25. git checkout -f ---> To restore the last snapshot of all the changed files
+
+
+
+-------- Commands to make SSH Keys -------
+1. ssh-keygen -t ed25519 -C "Your Email" 
+2. eval "$(ssh-agent -s)"
+3. ssh-add ~/.ssh/id_ed25519
+4. tail ~/.ssh/id_ed25519.pub 
+
+
+
+-------- Command to push your git directory to github -------
+----> git push -u origin master 
+
+If there are more than one branch then follow the command to push 
+----> git push origin <Branch Name>: Your choice name
+
+If you changed some thing in master repositary then command to push again 
+----> git push origin master 
+
+----- Making alias of long commands ----
+---> git config --global alias.<Alias Name> <Git Command>
+
+
+
+------- Working with branches -------
+
+1. git checkout -b <Branch Name> ----> Create new branch 
+2. git checkout <Branch Name> ----> Swtich to another branch 
+3. git branch ----> List all the branch 
+4. git merge <Branch Name(that is to be merged)> ----> For merging two branch 
+5. git branch -v ----> List the last commit of all the branches
+6. git branch --merged ---> List all the branches that is merged into open branch
+7. git branch --no-merged ---> List all the unmerged branches
+8. git branch -d <Branch Name> ---> Delete the merged branch only
+9. git branch -D <Branch Name> ----> Delete the unmerged branch 

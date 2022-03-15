@@ -25,7 +25,7 @@
 
 9. git diff ---> Give the differences (in file) bewteen the staging area and working directory 
 10. git diff --staged ----> If all the changes has been staged it give the last differences before being staged.
-11. git commit -a -m "Commit Text" ---> It commit directly without going to staging area.
+11. git commit -a -m "Commit Text" ---> To commit the traced file directly without going to staging area.
 12. git rm <File Name> ----> To delete a file and adding the change to staging area
 13. git mv <Old File Name> <New File Name> ----> To rename a file and adding the chage to staging area
 14. git log -p -n ---> To list all the commits with there differences (Chages). n is number of commits you want
